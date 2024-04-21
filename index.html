@@ -4,81 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DaeHair</title>
-    <!-- <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: center;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div>
+        <div class="header">
             <p>Free Shipping on US Orders Over $60</p>
         </div>
         <div>
-            <img src="img/dae.png" width="120px">
-            <img src="img/Vector.png" width="19px">
-            <p>Shop</p>
-            <p>The Edit</p>
-            <p>Our Story</p>
-            <p>Reviews</p>
-            <p>Account</p>
+            <div id="menu-items">
+                <a>Shop</a>
+                <a>The Edit</a>
+                <a>Our Story</a>
+                <a>Reviews</a>
+            </div>
+            <img src="img/dae.png" width="120px" class="header-img">
+            <div class="cart">
+                <p>Account</p>
+                <img src="img/Vector.png" width="19px">
+                <p>0</p>
+            </div>
         </div>
     </header>
     <main>
     <section>
-        <img src="img/head.png" width="1440px">
-        <p>Ready To Get Drenched?</p>
-        <p>Meet Monsoon Moisture Mask</p>
-        <p>Shop Now</p>
+        <div class="top-image"><a>Shop Now</a></div>
+        <div class="shop-now">
+            <p>Ready To Get Drenched?</p>
+            <p>Meet Monsoon Moisture Mask</p>
+            <a>Shop Now</a>
+        </div>
     </section>
-    <section>
+    <section class="items">
         <h4>Pick a Pretty Bottle</h4>
         <div>
             <div>
                 <img src="img/set.png" width="380px">
-                <p>The Daedreamer Set</p>
+                <a>The Daedreamer Set</a>
                 <p>$49.00</p>
             </div>
             <div>
                 <img src="img/shampoo.png" width="380px">
-                <p>Shampoo</p>
+                <a>Shampoo</a>
                 <p>$24.00 to $64.00</p>
             </div>
             <div>
                 <img src="img/conditioner.png" width="380px">
-                <p>Conditioner</p>
+                <a>Conditioner</a>
                 <p>$24.00 to $64.00</p>
             </div>
         </div>
+        <div class="strilka">
+            <img src="img/strilka_left.png" width="66px">
+            <img src="img/strilka_right.png" width="66px">
+        </div>
     </section>
-    <section>
-        <img src="img/shop_now.png" width="1219px">
-        <p>Feel the warmth of the desert wherever you are.</p>
-        <p>Shop Sets</p>
+    <section class="shop-sets">
+        <div class="shop-sets-text">
+            <p>Feel the warmth of the desert wherever you are.</p>
+            <a>Shop Sets</a>
+        </div>
     </section>
-    <section>
-        <img src="img/women1.png" width="632px">
-        <img src="img/women2.png" width="339px">
+    <div class="women">
+        <img src="img/women1.png" width="632px" class="women1">
+        <img src="img/women2.png" width="339px" class="women2">
         <div>
             <h1>Meet Dae</h1>
             <p>We’re a haircare line based in sunny Arizona. Our products are made up of the many things that make our home special, 
                 including the scent of orange blossoms in the air, colors of majestic sunsets and nourishing ingredients derived from desert botanicals. 
                 We believe haircare doesn’t have to be complicated and aimed to make a line that is simple and effective. 
                 We hope that dae plays a special role in your everyday hair routine from sunrise to sunset and allows you to feel the warmth of the desert wherever you are.</p>
-            <h4>Read More</h4>
+            <a>Read More</a>
         </div>
-    </section>
-    <div>
+    </div>
+    <div class="table">
         <table>
             <tr>
                 <th>Vitamins</th>
@@ -119,8 +121,8 @@
             </tr>
         </table>
     </div>
-    <section>
-        <p> Follow Us <a href="https://www.instagram.com/daehair/?hl=ru">@daehair </a></p>
+    <section class="follow">
+        <p> Follow Us <a href="https://www.instagram.com/daehair/" target="_blank">@Daehair </a></p>
         <div>
             <img src="img/pic1.png" width="230px">
             <img src="img/pic2.png" width="230px">
@@ -132,23 +134,26 @@
     </section>
 </main>
         <footer>
-            <div>
-                <p>Sustainability</p>
-                <p>Contact Us</p>
-                <p>FAQ</p>
+            <div class="menu-footer">
+                <div>
+                    <p>Sustainability</p>
+                    <p>Contact Us</p>
+                    <p>FAQ</p>
+                </div>
+                <div>
+                    <p>Privacy Policy</p>
+                    <p>CA Privacy Rights</p>
+                    <p>Terms of Use</p>
+                </div>
             </div>
-            <div>
-                <p>Privacy Policy</p>
-                <p>CA Privacy Rights</p>
-                <p>Terms of Use</p>
-            </div>
-            <div>
+            <div class="discount-field">
                 <p>ONLY GOOD HAIR DAES AHEAD—AND 10% OFF YOUR FIRST ORDER</p>
+                <input type="email" placeholder="Subscribe">
                 <p>Want to shop in person? Swing by our showroom.</p>
                 <p>M-F, 10am-2pm 5051 E Indigo St, Suite 105, Mesa, AZ 85205</p>
             </div>
-            <div>
-                <p>© 2021 dae. All rights reserved.</p>
+            <div class="year-footer">
+                <p>© 2024 dae. All rights reserved.</p>
             </div>
         </footer>
 </body>
