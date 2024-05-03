@@ -71,6 +71,13 @@ header > div:not(.header) {
     color: #F6F4EC;
     padding: 69px 70px;
 }
+.img-items {
+    width: 380px;
+    max-width: 100%; 
+}
+.strilka img{
+    width: 66px;
+}
 .shop-now p:first-child {
     text-transform: uppercase;
     font-size: 18px;
@@ -105,7 +112,9 @@ header > div:not(.header) {
 .items > div > div {
     flex: 0 0 380px;
     margin-bottom: 70px;
+    width: 100%;
 }
+
 .items > div > div > a {
     display: inline-block;
     margin: 10px 0;
@@ -374,10 +383,13 @@ input[type=email]::placeholder {
     .shop-sets-text p {
         position: static; /* Змінити позицію на static, щоб елемент був в потоці документа */
         margin: 5px 0; /* Додати відступи для візуального розділення */
+        font-size: 90%;
     }
     .shop-sets-text a {
         position: static; /* Змінити позицію на static, щоб елемент був в потоці документа */
         margin: 5px 0; /* Додати відступи для візуального розділення */
+        font-size: 90%;
+
     }
     #menu-items {
         column-gap: 10px;
@@ -385,6 +397,19 @@ input[type=email]::placeholder {
     .header-img {
         display: none;
     }
+    .shop-now {
+        padding: 59px 60px;
+    }
+    .img-items {
+        width: 100%;
+    }
+    .img-items img {
+        width: 100%;
+    }
+    .items > div > div > a,
+    .items > div > div > p {
+    padding-left: 5px;
+}
     .women1, .women2 {
         display: none;
     }
@@ -399,6 +424,7 @@ input[type=email]::placeholder {
         left: 50%; /* Положення по горизонталі відносно батьківського елемента */
         top: 50%; /* Положення по вертикалі відносно батьківського елемента */
         transform: translate(-50%, -50%); 
+        height: auto;
     }
     .women > div h1,
     .women > div p,
@@ -417,8 +443,10 @@ input[type=email]::placeholder {
     }
     .menu-footer {
         order: 2; /* Зміна порядку відображення для мобільних пристроїв */
-        margin-top: 190px;
+        margin-top: 200px;
         padding: 0;
+        width: 80%;
+        
     }
     
     .discount-field {
@@ -432,6 +460,33 @@ input[type=email]::placeholder {
     }
     
     .year-footer {
-        order: 3; /* Зміна порядку відображення для мобільних пристроїв */
+        order: 3; 
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
+@media only screen and (max-width: 334px) {
+    .women > div h1,
+    .women > div p,
+    .women > div a {
+        font-size: 80%;
+        line-height: 20px;
+    }
+    .menu-footer {
+        margin-top: 230px;
+    }
+}
+/* @media only screen and (min-width: 500px) and (max-width: 768px) {
+    .women1, .women2 {
+        display: flex;
+    }
+    .women {
+        width: 100%;
+    }
+    .women img {
+        height: auto;
+        box-sizing: border-box; 
+        width: 50%;
+    }
+} */
