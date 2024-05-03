@@ -176,11 +176,13 @@ header > div:not(.header) {
 }
 .women .women1 {
     position: absolute;
+    width: 632px;
     left: 183px;
     top: 61px;
 }
 .women .women2 {
     position: absolute;
+    width: 339px;
     left: 100px;
     top: 535px;
 }
@@ -327,4 +329,109 @@ input[type=email]::placeholder {
     display: flex;
     color: #C17C6C;
     font-size: 14px;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        font-size: 90%; /* Зменшення на 20% */
+    }
+
+    .header {
+        font-size: 13.6px; /* Зменшення на 20% */
+    }
+
+    #menu-items,
+    .cart,
+    .shop-now p:first-child,
+    .shop-now p:nth-child(2),
+    .shop-now p:last-child,
+    .items > h4,
+    .items > div > div > a,
+    .items > div > div > p,
+    .strilka img,
+    .shop-sets-text,
+    .table,
+    table,
+    .follow,
+    .follow p,
+    .menu-footer,
+    .discount-field,
+    .discount-field p:nth-child(3),
+    .discount-field p:last-child,
+    input[type=email],
+    .year-footer {
+        font-size: 90%; /* Зменшення на 20% */
+    }
+    .shop-sets {
+        margin: 24px 24px 50px;
+    }
+    .shop-sets-text {
+        flex-direction: column; /* Розмістити елементи у стовпчик */
+        align-items: center; /* Центрувати елементи по горизонталі */
+        justify-content: center; /* Центрувати елементи по вертикалі */
+        height: auto; /* Автоматично обчислити висоту в залежності від вмісту */
+    }
+    .shop-sets-text p {
+        position: static; /* Змінити позицію на static, щоб елемент був в потоці документа */
+        margin: 5px 0; /* Додати відступи для візуального розділення */
+    }
+    .shop-sets-text a {
+        position: static; /* Змінити позицію на static, щоб елемент був в потоці документа */
+        margin: 5px 0; /* Додати відступи для візуального розділення */
+    }
+    #menu-items {
+        column-gap: 10px;
+    }
+    .header-img {
+        display: none;
+    }
+    .women1, .women2 {
+        display: none;
+    }
+    .women {
+        height: 600px;
+        position: relative; /* Додайте position: relative; для коректного позиціонування */
+    }
+    
+    .women > div {
+        width: 90%; 
+        position: absolute; /* Змінив position на absolute */
+        left: 50%; /* Положення по горизонталі відносно батьківського елемента */
+        top: 50%; /* Положення по вертикалі відносно батьківського елемента */
+        transform: translate(-50%, -50%); 
+    }
+    .women > div h1,
+    .women > div p,
+    .women > div a {
+        font-size: 90%;
+        line-height: 25px;
+    }
+    .follow p {
+        margin: 5px auto 15px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-footer {
+        order: 2; /* Зміна порядку відображення для мобільних пристроїв */
+        margin-top: 190px;
+        padding: 0;
+    }
+    
+    .discount-field {
+        order: 1; /* Зміна порядку відображення для мобільних пристроїв */
+        bottom: 90%;
+        position: absolute;
+        right: 10%;
+        left: 10%;
+        margin: 0px;
+        top: 5%;
+    }
+    
+    .year-footer {
+        order: 3; /* Зміна порядку відображення для мобільних пристроїв */
+    }
 }
