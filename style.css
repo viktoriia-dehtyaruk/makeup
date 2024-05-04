@@ -31,6 +31,9 @@ header > div:not(.header) {
     font-size: 18px;
     line-height: 27px;
 }
+.burger-btn {
+    display: none; 
+}
 .header-img {
     width: 120px;
     position: absolute;
@@ -339,16 +342,18 @@ input[type=email]::placeholder {
     color: #C17C6C;
     font-size: 14px;
 }
+#menu-burger {
+    display: none;
+}
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px){
     body {
-        font-size: 90%; /* Зменшення на 20% */
+        font-size: 90%;
     }
 
     .header {
-        font-size: 13.6px; /* Зменшення на 20% */
+        font-size: 13.6px; 
     }
-
     #menu-items,
     .cart,
     .shop-now p:first-child,
@@ -369,29 +374,30 @@ input[type=email]::placeholder {
     .discount-field p:last-child,
     input[type=email],
     .year-footer {
-        font-size: 90%; /* Зменшення на 20% */
+        font-size: 90%;
     }
     .shop-sets {
         margin: 24px 24px 50px;
     }
     .shop-sets-text {
-        flex-direction: column; /* Розмістити елементи у стовпчик */
-        align-items: center; /* Центрувати елементи по горизонталі */
-        justify-content: center; /* Центрувати елементи по вертикалі */
-        height: auto; /* Автоматично обчислити висоту в залежності від вмісту */
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center; 
+        height: auto; 
     }
     .shop-sets-text p {
-        position: static; /* Змінити позицію на static, щоб елемент був в потоці документа */
-        margin: 5px 0; /* Додати відступи для візуального розділення */
+        position: static; 
+        margin: 5px 0; 
         font-size: 90%;
     }
     .shop-sets-text a {
-        position: static; /* Змінити позицію на static, щоб елемент був в потоці документа */
-        margin: 5px 0; /* Додати відступи для візуального розділення */
+        position: static; 
+        margin: 5px 0; 
         font-size: 90%;
 
     }
     #menu-items {
+        display: flex;
         column-gap: 10px;
     }
     .header-img {
@@ -409,20 +415,20 @@ input[type=email]::placeholder {
     .items > div > div > a,
     .items > div > div > p {
     padding-left: 5px;
-}
+    }
     .women1, .women2 {
         display: none;
     }
     .women {
         height: 600px;
-        position: relative; /* Додайте position: relative; для коректного позиціонування */
+        position: relative;
     }
     
     .women > div {
         width: 90%; 
-        position: absolute; /* Змінив position на absolute */
-        left: 50%; /* Положення по горизонталі відносно батьківського елемента */
-        top: 50%; /* Положення по вертикалі відносно батьківського елемента */
+        position: absolute; 
+        left: 50%; 
+        top: 50%; 
         transform: translate(-50%, -50%); 
         height: auto;
     }
@@ -442,7 +448,7 @@ input[type=email]::placeholder {
         align-items: center;
     }
     .menu-footer {
-        order: 2; /* Зміна порядку відображення для мобільних пристроїв */
+        order: 2; 
         margin-top: 200px;
         padding: 0;
         width: 80%;
@@ -450,7 +456,7 @@ input[type=email]::placeholder {
     }
     
     .discount-field {
-        order: 1; /* Зміна порядку відображення для мобільних пристроїв */
+        order: 1; 
         bottom: 90%;
         position: absolute;
         right: 10%;
@@ -466,7 +472,7 @@ input[type=email]::placeholder {
         transform: translateX(-50%);
     }
 }
-@media only screen and (max-width: 334px) {
+@media only screen and (max-width: 375px) {
     .women > div h1,
     .women > div p,
     .women > div a {
@@ -476,17 +482,35 @@ input[type=email]::placeholder {
     .menu-footer {
         margin-top: 230px;
     }
-}
-/* @media only screen and (min-width: 500px) and (max-width: 768px) {
-    .women1, .women2 {
+    #menu-burger {
+        display: block; 
+    }
+    #menu-items {
+        display: none;
+    }
+    .menu-header {
+        position: relative;
+    }
+    #menu-items {
+        position: absolute;
         display: flex;
+        flex-direction: column;
+        left: 0;
+        top: 70px;
+        width: 150px; 
+        background-color: rgba(255, 255, 255, 0.7);        
+        z-index: 9999; 
+        transition: left 0.3s ease; 
+        text-align: left; 
     }
-    .women {
-        width: 100%;
+    #menu-items a {
+        text-align: left;
+        display: inline;
+        left: 0;
     }
-    .women img {
-        height: auto;
-        box-sizing: border-box; 
-        width: 50%;
-    }
-} */
+}
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+   .header-img {
+    display: flex;
+   }
+}
